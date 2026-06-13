@@ -15,7 +15,9 @@ export default function OptimizerPage() {
   const applied = usePersistentSet("costlens-applied-recommendations");
 
   const visibleRecommendations = recommendations.filter((recommendation) => !dismissed.values.has(recommendation.id));
-  const total = visibleRecommendations.reduce((sum, recommendation) => sum + recommendation.estimatedMonthlySaving, 0);
+  const total = visibleRecommendations
+    .filter((recommendation) => !applied.values.has(recommendation.id))
+    .reduce((sum, recommendation) => sum + recommendation.estimatedMonthlySaving, 0);
 
   if (loading && !data) {
     return <div className="p-6 text-sm text-muted">Loading recommendations...</div>;

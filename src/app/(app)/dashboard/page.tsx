@@ -22,9 +22,13 @@ import { MeetingTable } from "@/components/MeetingTable";
 import { CostValue } from "@/components/CostValue";
 import { inr } from "@/lib/format";
 import { useAppData } from "@/lib/use-app-data";
+import { usePersistentSet } from "@/lib/use-persistent-set";
 
 export default function DashboardPage() {
   const { data, loading, error, reload } = useAppData();
+  const dismissed = usePersistentSet("costlens-dismissed-recommendations");
+  const applied = usePersistentSet("costlens-applied-recommendations");
+  const resolved = usePersistentSet("costlens-resolved-anomalies");
 
   async function runAttribution() {
     await fetch("/api/ai/attribute-meetings", { method: "POST" });
@@ -39,8 +43,20 @@ export default function DashboardPage() {
     return <div className="p-6 text-sm text-danger-ink">{error ?? "Failed to load dashboard."}</div>;
   }
 
-  const stats = data.summary;
-  const topAnomalies = data.anomalies.slice(0, 3);
+  const visibleAnomalies = data.anomalies.filter((a) => !resolved.values.has(a.id));
+  const topAnomalies = visibleAnomalies.slice(0, 3);
+  
+  const openRecommendations = data.recommendations.filter(
+    (r) => !dismissed.values.has(r.id) && !applied.values.has(r.id)
+  );
+  const potentialSavings = openRecommendations.reduce((sum, r) => sum + r.estimatedMonthlySaving, 0);
+
+  const stats = {
+    ...data.summary,
+    openAnomalies: visibleAnomalies.length,
+    potentialSavings,
+  };
+
   const recentMeetings = [...data.meetings].sort((left, right) => right.totalCost - left.totalCost).slice(0, 6);
 
   return (
@@ -215,7 +231,7 @@ export default function DashboardPage() {
         >
           <div className="space-y-3">
             {topAnomalies.length > 0 ? (
-              topAnomalies.map((anomaly) => <AnomalyCard key={anomaly.id} anomaly={anomaly} />)
+              topAnomalies.map((anomaly) => <AnomalyCard key={anomaly.id} anomaly={anomaly} onResolve={resolved.add} />)
             ) : (
               <div className="panel px-4 py-5 text-sm text-muted">No anomalies yet. Import meetings to begin detection.</div>
             )}
