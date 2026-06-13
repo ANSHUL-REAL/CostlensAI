@@ -3,7 +3,7 @@
 > **AI Hackathon 2025 · Problem Statement #1**
 > Turn calendar meetings into project-level HR expenditure insights — no timesheets, no surveillance.
 
-**Live demo:** _deploy to Vercel and paste URL here_
+**Live demo:** https://costlens-ai-er9s.vercel.app/login
 
 ---
 
