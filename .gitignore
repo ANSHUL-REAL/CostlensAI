@@ -7,3 +7,9 @@ out
 next-env.d.ts
 
 .vercel
+
+# dev logs
+*.log
+
+# IDE/Tooling config
+.claude/
