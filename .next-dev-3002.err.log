@@ -1,0 +1,25 @@
+
+[1m[33mwarn[39m[22m - The `content` option in your Tailwind CSS configuration is missing or empty.
+[1m[33mwarn[39m[22m - Configure your content sources or your generated CSS will be missing styles.
+[1m[33mwarn[39m[22m - https://tailwindcss.com/docs/content-configuration
+ ⨯ ./src/app/globals.css:25:3
+Syntax error: D:\Games\costlens-ai\src\app\globals.css The `text-body` class does not exist. If `text-body` is a custom class, make sure it is defined within a `@layer` directive.
+
+ [90m 23 | [39m
+ [90m 24 | [39mbody [33m{[39m
+[1m[31m>[39m[22m[90m 25 | [39m  [36m@apply[39m font-sans text-body antialiased[33m;[39m
+ [90m    | [39m  [1m[31m^[39m[22m
+ [90m 26 | [39m  background-color[33m:[39m [35m#060912[39m[33m;[39m
+ [90m 27 | [39m  background-image[33m:[39m
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|D:\Games\costlens-ai\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[13].oneOf[12].use[2]!D:\Games\costlens-ai\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[13].oneOf[12].use[3]!D:\Games\costlens-ai\src\app\globals.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+ ⨯ ./src/components/ui.tsx
+Error: Failed to read source code from D:\Games\costlens-ai\src\components\ui.tsx
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Import trace for requested module:
+./src/components/ui.tsx
+./src/app/(app)/optimizer/page.tsx
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload

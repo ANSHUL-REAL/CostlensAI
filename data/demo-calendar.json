@@ -1,0 +1,366 @@
+[
+  {
+    "id": "evt_m1",
+    "summary": "CareCircle Sprint Planning",
+    "description": "Full-team sprint planning for the CareCircle donor matching platform.",
+    "start": { "dateTime": "2026-06-08T09:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-08T10:30:00+05:30" },
+    "organizer": { "email": "priya@acme.com", "displayName": "Priya Sharma" },
+    "attendees": [
+      { "email": "priya@acme.com",  "displayName": "Priya Sharma",   "responseStatus": "accepted" },
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",    "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" },
+      { "email": "vikram@acme.com", "displayName": "Vikram Singh",   "responseStatus": "accepted" },
+      { "email": "sourab@acme.com", "displayName": "Sourab Reddy",   "responseStatus": "accepted" },
+      { "email": "kiran@acme.com",  "displayName": "Kiran Desai",    "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m2",
+    "summary": "CareCircle Donor Dashboard Sync",
+    "description": "Weekly sync on donor dashboard widgets and patient data API contracts.",
+    "start": { "dateTime": "2026-06-08T10:30:00+05:30" },
+    "end":   { "dateTime": "2026-06-08T11:30:00+05:30" },
+    "organizer": { "email": "priya@acme.com", "displayName": "Priya Sharma" },
+    "attendees": [
+      { "email": "priya@acme.com",  "displayName": "Priya Sharma",   "responseStatus": "accepted" },
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",    "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" }
+    ],
+    "recurringEventId": "rec_donor_sync"
+  },
+  {
+    "id": "evt_m3",
+    "summary": "Patient Matching Logic Discussion",
+    "description": "Deep dive on thalassemia patient matching algorithm and API edge cases.",
+    "start": { "dateTime": "2026-06-09T11:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-09T12:30:00+05:30" },
+    "organizer": { "email": "priya@acme.com", "displayName": "Priya Sharma" },
+    "attendees": [
+      { "email": "priya@acme.com",  "displayName": "Priya Sharma",   "responseStatus": "accepted" },
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",    "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" },
+      { "email": "aditya@acme.com", "displayName": "Aditya Kumar",   "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m4",
+    "summary": "CareCircle API Review",
+    "description": "Review patient-matching API endpoints before v1.2 release.",
+    "start": { "dateTime": "2026-06-09T14:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-09T15:00:00+05:30" },
+    "organizer": { "email": "rahul@acme.com", "displayName": "Rahul Verma" },
+    "attendees": [
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",  "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" },
+      { "email": "vikram@acme.com", "displayName": "Vikram Singh",  "responseStatus": "accepted" }
+    ],
+    "recurringEventId": "rec_api_review"
+  },
+  {
+    "id": "evt_m5",
+    "summary": "UI Review",
+    "description": "Design review of CareCircle dashboard screens before handoff.",
+    "start": { "dateTime": "2026-06-10T15:30:00+05:30" },
+    "end":   { "dateTime": "2026-06-10T16:15:00+05:30" },
+    "organizer": { "email": "sourab@acme.com", "displayName": "Sourab Reddy" },
+    "attendees": [
+      { "email": "sourab@acme.com", "displayName": "Sourab Reddy",   "responseStatus": "accepted" },
+      { "email": "divya@acme.com",  "displayName": "Divya Kapoor",   "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m6",
+    "summary": "Architecture Review",
+    "description": "System architecture review for backend services and infra.",
+    "start": { "dateTime": "2026-06-11T16:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-11T17:00:00+05:30" },
+    "organizer": { "email": "vikram@acme.com", "displayName": "Vikram Singh" },
+    "attendees": [
+      { "email": "vikram@acme.com", "displayName": "Vikram Singh",   "responseStatus": "accepted" },
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",    "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" },
+      { "email": "aditya@acme.com", "displayName": "Aditya Kumar",   "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m7",
+    "summary": "Backend Deployment Planning",
+    "description": "Plan v1.2 deployment pipeline, rollback strategy, and staging checklist.",
+    "start": { "dateTime": "2026-06-12T10:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-12T10:45:00+05:30" },
+    "organizer": { "email": "rahul@acme.com", "displayName": "Rahul Verma" },
+    "attendees": [
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",    "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" },
+      { "email": "vikram@acme.com", "displayName": "Vikram Singh",   "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m8",
+    "summary": "Frontend Sync",
+    "description": "Frontend standup.",
+    "start": { "dateTime": "2026-06-09T09:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-09T09:30:00+05:30" },
+    "organizer": { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal" },
+    "attendees": [
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" },
+      { "email": "kavya@acme.com",  "displayName": "Kavya Patel",    "responseStatus": "accepted" },
+      { "email": "rohan@acme.com",  "displayName": "Rohan Malhotra", "responseStatus": "accepted" }
+    ],
+    "recurringEventId": "rec_fe_sync"
+  },
+  {
+    "id": "evt_m9",
+    "summary": "Backend Sync",
+    "description": "Recurring backend coordination call.",
+    "start": { "dateTime": "2026-06-08T08:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-08T09:00:00+05:30" },
+    "organizer": { "email": "rahul@acme.com", "displayName": "Rahul Verma" },
+    "attendees": [
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",    "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" },
+      { "email": "vikram@acme.com", "displayName": "Vikram Singh",   "responseStatus": "accepted" }
+    ],
+    "recurringEventId": "rec_be_sync"
+  },
+  {
+    "id": "evt_m10",
+    "summary": "Sales CRM Client Demo",
+    "description": "Live CRM demo for prospective enterprise client.",
+    "start": { "dateTime": "2026-06-09T15:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-09T15:45:00+05:30" },
+    "organizer": { "email": "arjun@acme.com", "displayName": "Arjun Rao" },
+    "attendees": [
+      { "email": "arjun@acme.com",  "displayName": "Arjun Rao",    "responseStatus": "accepted" },
+      { "email": "priya@acme.com",  "displayName": "Priya Sharma",  "responseStatus": "accepted" },
+      { "email": "manish@acme.com", "displayName": "Manish Chopra", "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m11",
+    "summary": "Sales Pipeline Weekly Review",
+    "description": "Review pipeline stages, deal velocity, and weekly forecast.",
+    "start": { "dateTime": "2026-06-10T09:30:00+05:30" },
+    "end":   { "dateTime": "2026-06-10T10:30:00+05:30" },
+    "organizer": { "email": "arjun@acme.com", "displayName": "Arjun Rao" },
+    "attendees": [
+      { "email": "arjun@acme.com",  "displayName": "Arjun Rao",    "responseStatus": "accepted" },
+      { "email": "priya@acme.com",  "displayName": "Priya Sharma",  "responseStatus": "accepted" },
+      { "email": "manish@acme.com", "displayName": "Manish Chopra", "responseStatus": "accepted" },
+      { "email": "riya@acme.com",   "displayName": "Riya Nair",     "responseStatus": "accepted" }
+    ],
+    "recurringEventId": "rec_pipeline_review"
+  },
+  {
+    "id": "evt_m12",
+    "summary": "CRM Feature Kickoff",
+    "description": "Kickoff for the new pipeline analytics feature — scope, tasks, timeline.",
+    "start": { "dateTime": "2026-06-11T10:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-11T11:30:00+05:30" },
+    "organizer": { "email": "arjun@acme.com", "displayName": "Arjun Rao" },
+    "attendees": [
+      { "email": "arjun@acme.com",  "displayName": "Arjun Rao",    "responseStatus": "accepted" },
+      { "email": "priya@acme.com",  "displayName": "Priya Sharma",  "responseStatus": "accepted" },
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",   "responseStatus": "accepted" },
+      { "email": "rohan@acme.com",  "displayName": "Rohan Malhotra","responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m13",
+    "summary": "Sales Strategy Session",
+    "description": "Quarterly sales strategy with director and regional leads.",
+    "start": { "dateTime": "2026-06-13T14:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-13T15:00:00+05:30" },
+    "organizer": { "email": "deepak@acme.com", "displayName": "Deepak Saxena" },
+    "attendees": [
+      { "email": "arjun@acme.com",  "displayName": "Arjun Rao",    "responseStatus": "accepted" },
+      { "email": "manish@acme.com", "displayName": "Manish Chopra", "responseStatus": "accepted" },
+      { "email": "riya@acme.com",   "displayName": "Riya Nair",     "responseStatus": "accepted" },
+      { "email": "deepak@acme.com", "displayName": "Deepak Saxena", "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m14",
+    "summary": "Quarterly Hiring Roadmap",
+    "description": "Cross-functional hiring roadmap for Q3 — headcount, interview loops, JDs.",
+    "start": { "dateTime": "2026-06-10T13:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-10T14:30:00+05:30" },
+    "organizer": { "email": "meera@acme.com", "displayName": "Meera Iyer" },
+    "attendees": [
+      { "email": "meera@acme.com",  "displayName": "Meera Iyer",    "responseStatus": "accepted" },
+      { "email": "nisha@acme.com",  "displayName": "Nisha Joshi",   "responseStatus": "accepted" },
+      { "email": "priya@acme.com",  "displayName": "Priya Sharma",  "responseStatus": "accepted" },
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",   "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" },
+      { "email": "vikram@acme.com", "displayName": "Vikram Singh",  "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m15",
+    "summary": "HR Policy Update",
+    "description": "Leave policy and appraisal cycle revisions for Q3.",
+    "start": { "dateTime": "2026-06-11T10:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-11T10:45:00+05:30" },
+    "organizer": { "email": "meera@acme.com", "displayName": "Meera Iyer" },
+    "attendees": [
+      { "email": "meera@acme.com", "displayName": "Meera Iyer",  "responseStatus": "accepted" },
+      { "email": "nisha@acme.com", "displayName": "Nisha Joshi", "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m16",
+    "summary": "Performance Review Discussion",
+    "description": "Mid-year performance calibration for engineering and design bands.",
+    "start": { "dateTime": "2026-06-12T13:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-12T14:00:00+05:30" },
+    "organizer": { "email": "meera@acme.com", "displayName": "Meera Iyer" },
+    "attendees": [
+      { "email": "meera@acme.com", "displayName": "Meera Iyer",   "responseStatus": "accepted" },
+      { "email": "priya@acme.com", "displayName": "Priya Sharma", "responseStatus": "accepted" },
+      { "email": "pooja@acme.com", "displayName": "Pooja Pandey", "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m17",
+    "summary": "Engineer Hiring Panel",
+    "description": "Technical interview panel for 2 senior backend engineering candidates.",
+    "start": { "dateTime": "2026-06-13T10:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-13T11:30:00+05:30" },
+    "organizer": { "email": "meera@acme.com", "displayName": "Meera Iyer" },
+    "attendees": [
+      { "email": "meera@acme.com",  "displayName": "Meera Iyer",   "responseStatus": "accepted" },
+      { "email": "nisha@acme.com",  "displayName": "Nisha Joshi",  "responseStatus": "accepted" },
+      { "email": "vikram@acme.com", "displayName": "Vikram Singh", "responseStatus": "accepted" },
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",  "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m18",
+    "summary": "Onboarding Process Review",
+    "description": "Review and improve developer onboarding checklist and tooling setup.",
+    "start": { "dateTime": "2026-06-13T15:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-13T15:45:00+05:30" },
+    "organizer": { "email": "meera@acme.com", "displayName": "Meera Iyer" },
+    "attendees": [
+      { "email": "meera@acme.com",  "displayName": "Meera Iyer",    "responseStatus": "accepted" },
+      { "email": "nisha@acme.com",  "displayName": "Nisha Joshi",   "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m19",
+    "summary": "Product Roadmap Review",
+    "description": "Quarterly roadmap review — themes, priorities, and success metrics.",
+    "start": { "dateTime": "2026-06-13T11:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-13T12:00:00+05:30" },
+    "organizer": { "email": "kiran@acme.com", "displayName": "Kiran Desai" },
+    "attendees": [
+      { "email": "priya@acme.com",  "displayName": "Priya Sharma", "responseStatus": "accepted" },
+      { "email": "kiran@acme.com",  "displayName": "Kiran Desai",  "responseStatus": "accepted" },
+      { "email": "saurav@acme.com", "displayName": "Saurav Bhat",  "responseStatus": "accepted" },
+      { "email": "divya@acme.com",  "displayName": "Divya Kapoor", "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m20",
+    "summary": "Product Research Brainstorm",
+    "description": "Open brainstorm on next-quarter discovery themes and user problem spaces.",
+    "start": { "dateTime": "2026-06-11T14:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-11T15:00:00+05:30" },
+    "organizer": { "email": "priya@acme.com", "displayName": "Priya Sharma" },
+    "attendees": [
+      { "email": "priya@acme.com",  "displayName": "Priya Sharma",  "responseStatus": "accepted" },
+      { "email": "sourab@acme.com", "displayName": "Sourab Reddy",  "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" },
+      { "email": "saurav@acme.com", "displayName": "Saurav Bhat",   "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m21",
+    "summary": "Discovery Sprint Kickoff",
+    "description": "Kick off a 2-week discovery sprint — hypothesis, research plan, outputs.",
+    "start": { "dateTime": "2026-06-12T14:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-12T14:45:00+05:30" },
+    "organizer": { "email": "kiran@acme.com", "displayName": "Kiran Desai" },
+    "attendees": [
+      { "email": "kiran@acme.com",  "displayName": "Kiran Desai",  "responseStatus": "accepted" },
+      { "email": "saurav@acme.com", "displayName": "Saurav Bhat",  "responseStatus": "accepted" },
+      { "email": "tanya@acme.com",  "displayName": "Tanya Mehta",  "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m22",
+    "summary": "AI Hiring Assistant Brainstorm",
+    "description": "Idea session for an internal AI-powered hiring assistant tool.",
+    "start": { "dateTime": "2026-06-10T11:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-10T12:00:00+05:30" },
+    "organizer": { "email": "meera@acme.com", "displayName": "Meera Iyer" },
+    "attendees": [
+      { "email": "meera@acme.com",  "displayName": "Meera Iyer",    "responseStatus": "accepted" },
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",   "responseStatus": "accepted" },
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m23",
+    "summary": "AI Tool Prototype Discussion",
+    "description": "Design session for the AI hiring tool prototype — scope and tech stack.",
+    "start": { "dateTime": "2026-06-11T11:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-11T12:00:00+05:30" },
+    "organizer": { "email": "meera@acme.com", "displayName": "Meera Iyer" },
+    "attendees": [
+      { "email": "meera@acme.com", "displayName": "Meera Iyer",   "responseStatus": "accepted" },
+      { "email": "rahul@acme.com", "displayName": "Rahul Verma",  "responseStatus": "accepted" },
+      { "email": "nisha@acme.com", "displayName": "Nisha Joshi",  "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m24",
+    "summary": "AI Hiring Tool Feasibility",
+    "description": "Feasibility and effort estimate for the AI hiring automation tool.",
+    "start": { "dateTime": "2026-06-12T11:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-12T11:45:00+05:30" },
+    "organizer": { "email": "meera@acme.com", "displayName": "Meera Iyer" },
+    "attendees": [
+      { "email": "meera@acme.com", "displayName": "Meera Iyer",    "responseStatus": "accepted" },
+      { "email": "rahul@acme.com", "displayName": "Rahul Verma",   "responseStatus": "accepted" },
+      { "email": "rohan@acme.com", "displayName": "Rohan Malhotra","responseStatus": "accepted" },
+      { "email": "kavya@acme.com", "displayName": "Kavya Patel",   "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  },
+  {
+    "id": "evt_m25",
+    "summary": "Random Catchup",
+    "description": "Informal team catchup — no agenda provided.",
+    "start": { "dateTime": "2026-06-12T16:00:00+05:30" },
+    "end":   { "dateTime": "2026-06-12T16:30:00+05:30" },
+    "organizer": { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal" },
+    "attendees": [
+      { "email": "anshul@acme.com", "displayName": "Anshul Nautiyal","responseStatus": "accepted" },
+      { "email": "sourab@acme.com", "displayName": "Sourab Reddy",   "responseStatus": "accepted" },
+      { "email": "rahul@acme.com",  "displayName": "Rahul Verma",    "responseStatus": "accepted" }
+    ],
+    "recurringEventId": null
+  }
+]

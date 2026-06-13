@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CostLens AI//Mock Calendar//EN
+BEGIN:VEVENT
+UID:ics-test-event-1
+SUMMARY:CareCircle Frontend Review & Brainstorm
+DESCRIPTION:Reviewing the CareCircle patient dashboard prototype. Check for keyword matches in tags: thalassaemia, CareCircle.
+DTSTART:20260608T100000Z
+DTEND:20260608T113000Z
+ORGANIZER;CN=Priya Sharma:mailto:priya@acme.com
+ATTENDEE;CN=Anshul Nautiyal;RSVP=TRUE:mailto:anshul@acme.com
+ATTENDEE;CN=Kavya Patel;RSVP=TRUE:mailto:kavya@acme.com
+ATTENDEE;CN=Sourab Reddy;RSVP=TRUE:mailto:sourab@acme.com
+END:VEVENT
+BEGIN:VEVENT
+UID:ics-test-event-2
+SUMMARY:Sales CRM Weekly Sync
+DESCRIPTION:Aligning pipeline deals. Check for keyword matches in tags: sales, pipeline, CRM.
+DTSTART:20260609T140000Z
+DTEND:20260609T150000Z
+ORGANIZER;CN=Arjun Rao:mailto:arjun@acme.com
+ATTENDEE;CN=Manish Chopra;RSVP=TRUE:mailto:manish@acme.com
+ATTENDEE;CN=Riya Nair;RSVP=TRUE:mailto:riya@acme.com
+END:VEVENT
+END:VCALENDAR

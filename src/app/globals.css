@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "GT Flexa", "Space Grotesk", Arial, sans-serif;
+  --font-display: "Mona Sans", "Manrope", "Space Grotesk", Arial, sans-serif;
+  --radius-base: 1px;
+  --radius-small: 4px;
+  --radius-large: 32px;
+  --radius-button-modal: 40px;
+  --radius-pill: 799.2px;
+}
+
+
+html[data-theme="dark"] {
+  --canvas: 20 21 19;
+  --panel: 28 28 28;
+  --panel-strong: 32 29 29;
+  --panel-soft: 24 24 24;
+  --line: 102 102 102;
+  --line-soft: 72 72 72;
+  --ink: 249 249 249;
+  --body: 218 218 218;
+  --muted: 151 151 151;
+  --brand: 193 248 92;
+  --brand-strong: 193 248 92;
+  --success: 193 248 92;
+  --warning: 255 214 125;
+  --danger: 255 124 124;
+}
+
+html[data-theme="light"] {
+  --canvas: 249 249 249;
+  --panel: 255 255 255;
+  --panel-strong: 243 243 238;
+  --panel-soft: 238 238 234;
+  --line: 150 150 150;
+  --line-soft: 190 190 190;
+  --ink: 20 21 19;
+  --body: 54 54 54;
+  --muted: 104 104 104;
+  --brand: 121 168 20;
+  --brand-strong: 121 168 20;
+  --success: 121 168 20;
+  --warning: 168 122 18;
+  --danger: 196 76 76;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: rgb(var(--body));
+  background: rgb(var(--canvas));
+  font-feature-settings: "ss01", "cv02";
+  letter-spacing: -0.01em;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--line), 0.65) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(var(--line), 0.65);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.panel {
+  background: rgb(var(--panel));
+  border: 1px solid rgba(var(--line), 0.45);
+  border-radius: var(--radius-small);
+  position: relative;
+}
+
+.panel-grid {
+  background: rgb(var(--panel));
+}
+
+.panel-cut::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(var(--line), 0.22);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.command-label {
+  color: rgb(var(--muted));
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.number-grid {
+  color: rgb(var(--muted));
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.animate-rise {
+  animation: rise-in 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.animate-trace::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(var(--brand), 0.28);
+  border-radius: inherit;
+  opacity: 0;
+  animation: trace-pulse 4.4s ease-in-out infinite;
+}
+
+.recharts-cartesian-grid line {
+  stroke: rgba(var(--line-soft), 0.4);
+}
+
+.recharts-text,
+.recharts-label {
+  fill: rgb(var(--muted));
+  font-size: 11px;
+  font-family: var(--font-sans);
+}
+
+.recharts-legend-item-text {
+  font-size: 11px !important;
+  color: rgb(var(--muted)) !important;
+}
+
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: rgb(var(--panel-strong)) !important;
+  border: 1px solid rgba(var(--line), 0.55) !important;
+  box-shadow: none !important;
+  border-radius: 4px !important;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes trace-pulse {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  45%,
+  55% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.glass-card {
+  background: rgb(var(--panel));
+  border: 1px solid rgba(var(--line), 0.45);
+  border-radius: var(--radius-small);
+}
+
+.glass-input {
+  background: rgb(var(--panel-soft));
+  border: 1px solid rgba(var(--line), 0.45);
+  border-radius: var(--radius-small);
+  color: rgb(var(--ink));
+  font-family: var(--font-sans);
+  transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+  border-color: rgb(var(--brand));
+  outline: none;
+}
+
