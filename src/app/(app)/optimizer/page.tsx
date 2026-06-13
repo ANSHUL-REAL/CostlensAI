@@ -32,7 +32,7 @@ export default function OptimizerPage() {
       <PageHeader
         title="AI Optimizer"
         subtitle="Actionable savings moves generated from the current meeting cost graph."
-        showDateRange={false}
+        showDateRange={true}
         action={
           <Button
             variant="primary"

@@ -43,7 +43,7 @@ export default function AnomaliesPage() {
       <PageHeader
         title="Anomalies"
         subtitle="Detected cost issues, hidden leakage, and policy exceptions that need action."
-        showDateRange={false}
+        showDateRange={true}
         action={
           <Button variant="primary" size="sm" onClick={runDetection}>
             <Play className="h-4 w-4" /> Run detection

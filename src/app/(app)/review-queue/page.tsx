@@ -17,8 +17,9 @@ export default function ReviewQueuePage() {
   const [reviewed,    setReviewed] = React.useState<Set<string>>(new Set());
 
   async function saveReview(id: string) {
-    if (!assignments[id]) return;
-    const selectedProject = projects.find((project) => project.name === assignments[id]);
+    const assignedName = assignments[id] || queue.find((m) => m.id === id)?.projectName;
+    if (!assignedName || assignedName === "Unclassified") return;
+    const selectedProject = projects.find((project) => project.name === assignedName);
     if (!selectedProject) return;
 
     await fetch("/api/review-queue", {
@@ -51,7 +52,7 @@ export default function ReviewQueuePage() {
       <PageHeader
         title="Review Queue"
         subtitle="Meetings attributed with less than 70% confidence — confirm or reassign"
-        showDateRange={false}
+        showDateRange={true}
       />
 
       <div className="space-y-5 p-6">
@@ -120,10 +121,12 @@ export default function ReviewQueuePage() {
                   <div className="flex items-center gap-3">
                     <div className="flex-1">
                       <Select
-                        value={assignments[m.id] ?? ""}
+                        value={assignments[m.id] ?? (m.projectName === "Unclassified" ? "" : m.projectName)}
                         onChange={e => setAssign(prev => ({ ...prev, [m.id]: e.target.value }))}
                       >
-                        <option value="">— Confirm or reassign project —</option>
+                        {m.projectName === "Unclassified" ? (
+                          <option value="">— Select a project —</option>
+                        ) : null}
                         {projects.map(p => (
                           <option key={p.id} value={p.name}>{p.name}</option>
                         ))}
@@ -132,7 +135,9 @@ export default function ReviewQueuePage() {
                     <Button
                       variant="primary"
                       size="sm"
-                      disabled={!assignments[m.id]}
+                      disabled={
+                        !(assignments[m.id] || (m.projectName && m.projectName !== "Unclassified"))
+                      }
                       onClick={() => saveReview(m.id)}
                     >
                       <CheckCircle2 className="h-4 w-4" /> Save & mark reviewed

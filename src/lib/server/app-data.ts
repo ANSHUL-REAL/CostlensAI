@@ -131,24 +131,40 @@ function startOfDay(date: Date) {
   return new Date(date.getFullYear(), date.getMonth(), date.getDate());
 }
 
-function getRangeStart(range: DateRangeFilter) {
+function getRangeBounds(range: DateRangeFilter): { start: Date; end: Date } {
   const now = new Date();
   const today = startOfDay(now);
 
   switch (range) {
-    case "Last week":
-      return new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
-    case "This month":
-      return new Date(today.getFullYear(), today.getMonth(), 1);
-    case "Last 30 days":
-      return new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000);
-    case "Custom range":
-      return new Date(today.getTime() - 14 * 24 * 60 * 60 * 1000);
+    case "Last week": {
+      const day = today.getDay();
+      const diff = day === 0 ? 6 : day - 1;
+      const thisWeekStart = new Date(today.getTime() - diff * 24 * 60 * 60 * 1000);
+      const lastWeekStart = new Date(thisWeekStart.getTime() - 7 * 24 * 60 * 60 * 1000);
+      return { start: lastWeekStart, end: thisWeekStart };
+    }
+    case "This month": {
+      const start = new Date(today.getFullYear(), today.getMonth(), 1);
+      const end = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+      return { start, end };
+    }
+    case "Last 30 days": {
+      const start = new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000);
+      const end = new Date(today.getTime() + 24 * 60 * 60 * 1000);
+      return { start, end };
+    }
+    case "Custom range": {
+      const start = new Date(today.getTime() - 14 * 24 * 60 * 60 * 1000);
+      const end = new Date(today.getTime() + 24 * 60 * 60 * 1000);
+      return { start, end };
+    }
     case "This week":
     default: {
       const day = today.getDay();
       const diff = day === 0 ? 6 : day - 1;
-      return new Date(today.getTime() - diff * 24 * 60 * 60 * 1000);
+      const start = new Date(today.getTime() - diff * 24 * 60 * 60 * 1000);
+      const end = new Date(start.getTime() + 7 * 24 * 60 * 60 * 1000);
+      return { start, end };
     }
   }
 }
@@ -595,7 +611,7 @@ export async function getAppData(role: Role, range: DateRangeFilter = "This week
   const employeeById = new Map(employees.map((employee) => [employee.id, employee]));
   const employeeByEmail = new Map(employees.map((employee) => [employee.email, employee]));
   const attendeesByMeeting = new Map<string, Meeting["attendees"]>();
-  const rangeStart = getRangeStart(range);
+  const { start: rangeStart, end: rangeEnd } = getRangeBounds(range);
 
   for (const attendee of attendeeRows) {
     const existing = attendeesByMeeting.get(attendee.meeting_id) ?? [];
@@ -633,7 +649,10 @@ export async function getAppData(role: Role, range: DateRangeFilter = "This week
     };
   });
 
-  const filteredMeetings = meetings.filter((meeting) => new Date(meeting.start) >= rangeStart);
+  const filteredMeetings = meetings.filter((meeting) => {
+    const meetingDate = new Date(meeting.start);
+    return meetingDate >= rangeStart && meetingDate < rangeEnd;
+  });
   const filteredProjectSpend = new Map<string, number>();
   for (const meeting of filteredMeetings) {
     if (meeting.projectId) {
